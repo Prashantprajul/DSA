@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# Allow directories (so Git can traverse folders)
+!*/
+
+# Allow only .cpp files
+!*.cpp
