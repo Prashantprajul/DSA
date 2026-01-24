@@ -88,6 +88,21 @@ public:
             cout<<it<<" ";
         cout<<endl;
     }
+
+    bool check()
+    {
+        int n = heap.size();
+        for(int i=0; i<=heap.size()/2-1; i++)
+        {
+            int left = i*2+1;
+            int right = i*2+2;
+            if(left<n && heap[i] > heap[left])
+                return false;
+            if(right<n && heap[i] > heap[right])
+                return false;
+        }
+        return true;
+    }
 };
 
 class MaxHeap{
@@ -174,6 +189,21 @@ public:
         for(auto it : heap)
             cout<<it<<" ";
         cout<<endl;
+    }
+
+    bool check()
+    {
+        int n = heap.size();
+        for(int i=0; i<heap.size()/2; i++)
+        {
+            int left = i*2+1;
+            int right = i*2+2;
+            if(left<n && heap[i] < heap[left])
+                return false;
+            if(right<n && heap[i] < heap[right])
+                return false;
+        }
+        return true;
     }
 };
 
